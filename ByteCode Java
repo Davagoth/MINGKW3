@@ -1,0 +1,233 @@
+// class version 63.0 (63) // klasa BubbleSortJava została skompilowana z wersją 63.0
+// access flags 0x21 // klasa BubbleSortJava ma flagę dostępu o wartości 0x21
+public class BubbleSortJava {
+
+  // compiled from: BubbleSortJava.java // klasa BubbleSortJava jest kompilowana z pliku źródłowego BubbleSortJava.java
+  // access flags 0x19 // klasa BubbleSortJava ma flagę dostępu o wartości 0x19
+  public final static INNERCLASS java/lang/invoke/MethodHandles$Lookup java/lang/invoke/MethodHandles Lookup
+  // deklaracja finalnej statycznej klasy INNERCLASS o nazwie Lookup typu java/lang/invoke/MethodHandles$Lookup
+
+  // access flags 0x1 // konstruktor ma flagę dostępu 0x1 (publiczny)
+  public <init>()V
+  // deklaracja konstruktora dla klasy BubbleSortJava
+   L0
+    LINENUMBER 1 L0
+    ALOAD 0
+    INVOKESPECIAL java/lang/Object.<init> ()V
+    RETURN
+   L1
+    LOCALVARIABLE this LBubbleSortJava; L0 L1 0
+    MAXSTACK = 1
+    MAXLOCALS = 1
+
+  // access flags 0x0
+  bubbleSort([I)V
+   L0
+    LINENUMBER 3 L0
+    ALOAD 1
+    ARRAYLENGTH
+    ISTORE 2
+   L1
+    LINENUMBER 4 L1
+    ICONST_0
+    ISTORE 3
+   L2
+   FRAME APPEND [I I]
+    ILOAD 3
+    ILOAD 2
+    ICONST_1
+    ISUB
+    IF_ICMPGE L3
+   L4
+    LINENUMBER 5 L4
+    ICONST_0
+    ISTORE 4
+   L5
+   FRAME APPEND [I]
+    ILOAD 4
+    ILOAD 2
+    ILOAD 3
+    ISUB
+    ICONST_1
+    ISUB
+    IF_ICMPGE L6
+   L7
+    LINENUMBER 6 L7
+    ALOAD 1
+    ILOAD 4
+    IALOAD
+    ALOAD 1
+    ILOAD 4
+    ICONST_1
+    IADD
+    IALOAD
+    IF_ICMPLE L8
+   L9
+    LINENUMBER 7 L9
+    ALOAD 1
+    ILOAD 4
+    IALOAD
+    ISTORE 5
+   L10
+    LINENUMBER 8 L10
+    ALOAD 1
+    ILOAD 4
+    ALOAD 1
+    ILOAD 4
+    ICONST_1
+    IADD
+    IALOAD
+    IASTORE
+   L11
+    LINENUMBER 9 L11
+    ALOAD 1
+    ILOAD 4
+    ICONST_1
+    IADD
+    ILOAD 5
+    IASTORE
+   L8
+    LINENUMBER 5 L8
+   FRAME SAME
+    IINC 4 1
+    GOTO L5
+   L6
+    LINENUMBER 4 L6
+   FRAME CHOP 1
+    IINC 3 1
+    GOTO L2
+   L3
+    LINENUMBER 11 L3
+   FRAME CHOP 1
+    RETURN
+   L12
+    LOCALVARIABLE temp I L10 L8 5
+    LOCALVARIABLE j I L5 L6 4
+    LOCALVARIABLE i I L2 L3 3
+    LOCALVARIABLE this LBubbleSortJava; L0 L12 0
+    LOCALVARIABLE arr [I L0 L12 1
+    LOCALVARIABLE n I L1 L12 2
+    MAXSTACK = 5
+    MAXLOCALS = 6
+
+  // access flags 0x0
+  printArray([I)V
+   L0
+    LINENUMBER 14 L0
+    ALOAD 1
+    ASTORE 2
+    ALOAD 2
+    ARRAYLENGTH
+    ISTORE 3
+    ICONST_0
+    ISTORE 4
+   L1
+   FRAME APPEND [[I I I]
+    ILOAD 4
+    ILOAD 3
+    IF_ICMPGE L2
+    ALOAD 2
+    ILOAD 4
+    IALOAD
+    ISTORE 5
+   L3
+    GETSTATIC java/lang/System.out : Ljava/io/PrintStream;
+    ILOAD 5
+    INVOKEDYNAMIC makeConcatWithConstants(I)Ljava/lang/String; [
+      // handle kind 0x6 : INVOKESTATIC
+      java/lang/invoke/StringConcatFactory.makeConcatWithConstants(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+      // arguments:
+      "\u0001 "
+    ]
+    INVOKEVIRTUAL java/io/PrintStream.print (Ljava/lang/String;)V
+   L4
+    IINC 4 1
+    GOTO L1
+   L2
+    LINENUMBER 15 L2
+   FRAME CHOP 3
+    GETSTATIC java/lang/System.out : Ljava/io/PrintStream;
+    INVOKEVIRTUAL java/io/PrintStream.println ()V
+   L5
+    LINENUMBER 16 L5
+    RETURN
+   L6
+    LOCALVARIABLE j I L3 L4 5
+    LOCALVARIABLE this LBubbleSortJava; L0 L6 0
+    LOCALVARIABLE arr [I L0 L6 1
+    MAXSTACK = 2
+    MAXLOCALS = 6
+
+  // access flags 0x9
+  public static main([Ljava/lang/String;)V
+   L0
+    LINENUMBER 19 L0
+    GETSTATIC java/lang/System.out : Ljava/io/PrintStream;
+    LDC "Java bubble sort"
+    INVOKEVIRTUAL java/io/PrintStream.println (Ljava/lang/String;)V
+   L1
+    LINENUMBER 20 L1
+    NEW BubbleSortJava
+    DUP
+    INVOKESPECIAL BubbleSortJava.<init> ()V
+    ASTORE 1
+   L2
+    LINENUMBER 21 L2
+    ICONST_5
+    NEWARRAY T_INT
+    DUP
+    ICONST_0
+    ICONST_5
+    IASTORE
+    DUP
+    ICONST_1
+    ICONST_1
+    IASTORE
+    DUP
+    ICONST_2
+    ICONST_4
+    IASTORE
+    DUP
+    ICONST_3
+    ICONST_2
+    IASTORE
+    DUP
+    ICONST_4
+    BIPUSH 8
+    IASTORE
+    ASTORE 2
+   L3
+    LINENUMBER 22 L3
+    GETSTATIC java/lang/System.out : Ljava/io/PrintStream;
+    LDC "Unsorted array"
+    INVOKEVIRTUAL java/io/PrintStream.println (Ljava/lang/String;)V
+   L4
+    LINENUMBER 23 L4
+    ALOAD 1
+    ALOAD 2
+    INVOKEVIRTUAL BubbleSortJava.printArray ([I)V
+   L5
+    LINENUMBER 24 L5
+    ALOAD 1
+    ALOAD 2
+    INVOKEVIRTUAL BubbleSortJava.bubbleSort ([I)V
+   L6
+    LINENUMBER 25 L6
+    GETSTATIC java/lang/System.out : Ljava/io/PrintStream;
+    LDC "Sorted array"
+    INVOKEVIRTUAL java/io/PrintStream.println (Ljava/lang/String;)V
+   L7
+    LINENUMBER 26 L7
+    ALOAD 1
+    ALOAD 2
+    INVOKEVIRTUAL BubbleSortJava.printArray ([I)V
+   L8
+    LINENUMBER 27 L8
+    RETURN
+   L9
+    LOCALVARIABLE args [Ljava/lang/String; L0 L9 0
+    LOCALVARIABLE ob LBubbleSortJava; L2 L9 1
+    LOCALVARIABLE arr [I L3 L9 2
+    MAXSTACK = 4
+    MAXLOCALS = 3
+}
