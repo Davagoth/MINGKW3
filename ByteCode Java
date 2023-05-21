@@ -9,65 +9,68 @@ public class BubbleSortJava {
 
   // access flags 0x1 // konstruktor ma flagę dostępu 0x1 (publiczny)
   public <init>()V
-  // deklaracja konstruktora dla klasy BubbleSortJava
-   L0
-    LINENUMBER 1 L0
-    ALOAD 0
+  // deklaracja konstruktora dla klasy BubbleSortJava, inicjalizacja obiektu
+   L0 //przypisanie etykiety L0
+    LINENUMBER 1 L0 //następująca linia kodu źródłowego odpowiada linii 1 w oryginalnym kodzie Java
+    ALOAD 0 //ładowanie bieżącej instancji na stos
     INVOKESPECIAL java/lang/Object.<init> ()V
-    RETURN
-   L1
+    //wywołanie metody <init> nadklasy java/lang/Object w celu zainicjowania obiektu.
+    RETURN //powrót z konstruktora
+   L1 //przypisanie etykiety L1
     LOCALVARIABLE this LBubbleSortJava; L0 L1 0
-    MAXSTACK = 1
-    MAXLOCALS = 1
+    //deklaracja zmiennej lokalnej o nazwie this typu BubbleSortJava z początkiem w etykiecie L0 i końcem w etykiecie L1
+    MAXSTACK = 1 //maksymalny rozmiar stosu wynosi 1
+    MAXLOCALS = 1 //maksymalna liczba zmiennych lokalnych wynosi 1
 
-  // access flags 0x0
+  // access flags 0x0 // metoda ma flagę dostępu 0x0 (publiczny)
   bubbleSort([I)V
+  // deklaracja metody bubbleSort, która przyjmuje tablicę liczb całkowitych ([I) jako parametr i zwraca wartość void
    L0
-    LINENUMBER 3 L0
-    ALOAD 1
-    ARRAYLENGTH
-    ISTORE 2
+    LINENUMBER 3 L0 // następująca linia kodu źródłowego odpowiada linii 3 w oryginalnym kodzie Java
+    ALOAD 1 // ładowanie odwołania do tablicy z pierwszej zmiennej lokalnej na stos
+    ARRAYLENGTH //określenie długości tablicy i przesunieńcie jej na stos
+    ISTORE 2 // zapisanie długości tablicy do zmiennej lokalnej 2
    L1
-    LINENUMBER 4 L1
-    ICONST_0
-    ISTORE 3
+    LINENUMBER 4 L1 // następująca linia kodu źródłowego odpowiada linii 4 w oryginalnym kodzie Java
+    ICONST_0 // przesunięcie stałej wartości 0 na stos
+    ISTORE 3 // zapisanie wartości 0 do zmiennej lokalnej 3
    L2
-   FRAME APPEND [I I]
-    ILOAD 3
-    ILOAD 2
-    ICONST_1
-    ISUB
-    IF_ICMPGE L3
+   FRAME APPEND [I I] // zmiana w tablicy zmiennych lokalnych, dołączając zmienne lokalne
+    ILOAD 3 // załadowanie wartości zmiennej lokalnej 3 (i) na stos
+    ILOAD 2 // załadowanie wartości zmiennej lokalnej 2 (n, długość tablicy) na stos
+    ICONST_1 // przesunięcie stałej wartości 1 na stos
+    ISUB // odjęcie dwóch najwyższych wartości całkowitych na stosie
+    IF_ICMPGE L3 // porównanie dwóch wartości całkowitych na stosie i rozgałęzienie do etykiety L3  (jeśli i >= n - 1)
    L4
-    LINENUMBER 5 L4
-    ICONST_0
-    ISTORE 4
+    LINENUMBER 5 L4 // następująca linia kodu źródłowego odpowiada linii 5 w oryginalnym kodzie Java
+    ICONST_0 // przesunięcie stałej wartości 0 na stos
+    ISTORE 4 // zapisanie wartości 0 do zmiennej lokalnej 4
    L5
-   FRAME APPEND [I]
-    ILOAD 4
-    ILOAD 2
-    ILOAD 3
-    ISUB
-    ICONST_1
-    ISUB
-    IF_ICMPGE L6
+   FRAME APPEND [I] // zmiana w tablicy zmiennych lokalnych, dołączając zmienną lokalną
+    ILOAD 4 // załadowanie wartości zmiennej lokalnej 4 (j) na stos
+    ILOAD 2 // załadowanie wartości zmiennej lokalnej 2 (n, długość tablicy) na stos
+    ILOAD 3 // załadowanie wartości zmiennej lokalnej 3 (i) na stos
+    ISUB // odjęcie dwóch najwyższych wartości całkowitych na stosie
+    ICONST_1 // przesunięcie stałej wartości 1 na stos
+    ISUB // odjęcie dwóch najwyższych wartości całkowitych na stosie
+    IF_ICMPGE L6 // porównanie dwóch wartości całkowitych na stosie i rozgałęzienie do etykiety L6  (jeśli  j >= n - i - 2)
    L7
-    LINENUMBER 6 L7
-    ALOAD 1
-    ILOAD 4
-    IALOAD
-    ALOAD 1
-    ILOAD 4
-    ICONST_1
-    IADD
-    IALOAD
-    IF_ICMPLE L8
+    LINENUMBER 6 L7 // następująca linia kodu źródłowego odpowiada linii 6 w oryginalnym kodzie Java
+    ALOAD 1 // ładowanie odwołania do tablicy z pierwszej zmiennej lokalnej na stos
+    ILOAD 4 // załadowanie wartości zmiennej lokalnej 4 (j) na stos
+    IALOAD // załadowanie liczby całkowitej o indeksie j na stos
+    ALOAD 1 // ładowanie odwołania do tablicy z pierwszej zmiennej lokalnej na stos
+    ILOAD 4 // załadowanie wartości zmiennej lokalnej 4 (j) na stos
+    ICONST_1 // przesunięcie stałej wartości 1 na stos
+    IADD // dodanie dwóch najwyższych wartości całkowitych na stosie
+    IALOAD // załadowanie liczby całkowitej z tablicy o indeksie j+1 na stos
+    IF_ICMPLE L8 // porównanie dwóch wartości całkowitych na stosie i rozgałęzienie do etykiety L8  (jeśli  arr[j] <= arr[j+1])
    L9
-    LINENUMBER 7 L9
-    ALOAD 1
-    ILOAD 4
-    IALOAD
-    ISTORE 5
+    LINENUMBER 7 L9 // następująca linia kodu źródłowego odpowiada linii 7 w oryginalnym kodzie Java
+    ALOAD 1 // ładowanie odwołania do tablicy z pierwszej zmiennej lokalnej na stos
+    ILOAD 4 // załadowanie wartości zmiennej lokalnej 4 (j) na stos
+    IALOAD // załadowanie liczby całkowitej z tablicy o indeksie j na stos
+    ISTORE 5 // zapisanie wartości na szczycie stosu do zmiennej lokalnej 4
    L10
     LINENUMBER 8 L10
     ALOAD 1
@@ -77,7 +80,7 @@ public class BubbleSortJava {
     ICONST_1
     IADD
     IALOAD
-    IASTORE
+    IASTORE // zapisanie wartości całkowitej na szczycie stosu
    L11
     LINENUMBER 9 L11
     ALOAD 1
@@ -88,50 +91,52 @@ public class BubbleSortJava {
     IASTORE
    L8
     LINENUMBER 5 L8
-   FRAME SAME
-    IINC 4 1
-    GOTO L5
+   FRAME SAME // wskazanie ramki z tymi samymi zmiennymi lokalnymi i stosem co poprzednia ramka
+    IINC 4 1 // zwiększenie wartości zmiennej lokalnej 4 (j) o 1
+    GOTO L5 // przeskoczenie do etykiety L5 (iteracja pętli)
    L6
     LINENUMBER 4 L6
-   FRAME CHOP 1
+   FRAME CHOP 1 // zmiana w tablicy zmiennych lokalnych, usuwając jedną zmienną lokalną
     IINC 3 1
-    GOTO L2
+    GOTO L2 // przeskoczenie do etykiety L2 (iteracja pętli)
    L3
     LINENUMBER 11 L3
    FRAME CHOP 1
-    RETURN
+    RETURN // wyjście z metody
    L12
-    LOCALVARIABLE temp I L10 L8 5
+    LOCALVARIABLE temp I L10 L8 5 // definicja zmiennych lokalnych i ich zakresów: temp, j, i, this, arr i n
     LOCALVARIABLE j I L5 L6 4
     LOCALVARIABLE i I L2 L3 3
     LOCALVARIABLE this LBubbleSortJava; L0 L12 0
     LOCALVARIABLE arr [I L0 L12 1
     LOCALVARIABLE n I L1 L12 2
-    MAXSTACK = 5
-    MAXLOCALS = 6
+    MAXSTACK = 5 // maksymalna głębokość stosu wymaganą przez metodę
+    MAXLOCALS = 6 // całkowita liczbę zmiennych lokalnych używanych przez metodę
 
   // access flags 0x0
   printArray([I)V
+  // deklaracja metody printArray, która przyjmuje tablicę liczb całkowitych ([I) jako parametr i zwraca wartość void
    L0
-    LINENUMBER 14 L0
+    LINENUMBER 14 L0 // następująca linia kodu źródłowego odpowiada linii 14 w oryginalnym kodzie Java
     ALOAD 1
-    ASTORE 2
+    ASTORE 2 // zapisanie odwołania do tablicy w zmiennej lokalnej 2 (n, długość tablicy)
     ALOAD 2
     ARRAYLENGTH
     ISTORE 3
     ICONST_0
     ISTORE 4
    L1
-   FRAME APPEND [[I I I]
+   FRAME APPEND [[I I I] // dołączenie ramki, dodając trzy dodatkowe zmienne lokalne do ramki: odwołanie do tablicy i dwie liczby całkowite
     ILOAD 4
     ILOAD 3
-    IF_ICMPGE L2
+    IF_ICMPGE L2 // porównanie dwóch wartości całkowitych na stosie i rozgałęzienie do etykiety L2  (zakończenie pętli)
     ALOAD 2
     ILOAD 4
     IALOAD
     ISTORE 5
    L3
     GETSTATIC java/lang/System.out : Ljava/io/PrintStream;
+    // pobranie referencji do pola out klasy System
     ILOAD 5
     INVOKEDYNAMIC makeConcatWithConstants(I)Ljava/lang/String; [
       // handle kind 0x6 : INVOKESTATIC
@@ -139,7 +144,9 @@ public class BubbleSortJava {
       // arguments:
       "\u0001 "
     ]
+    // wywołanie dynamicznej metody makeConcatWithConstants
     INVOKEVIRTUAL java/io/PrintStream.print (Ljava/lang/String;)V
+    // wywołanie metody print na obiekcie PrintStream
    L4
     IINC 4 1
     GOTO L1
@@ -160,21 +167,23 @@ public class BubbleSortJava {
 
   // access flags 0x9
   public static main([Ljava/lang/String;)V
+  // deklaracja metody main, która przyjmuje tablicę obiektów String jako dane wejściowe i zwraca void
    L0
     LINENUMBER 19 L0
     GETSTATIC java/lang/System.out : Ljava/io/PrintStream;
     LDC "Java bubble sort"
+    // przesunięcie stringa "Java bubble sort" na stos
     INVOKEVIRTUAL java/io/PrintStream.println (Ljava/lang/String;)V
    L1
     LINENUMBER 20 L1
-    NEW BubbleSortJava
-    DUP
-    INVOKESPECIAL BubbleSortJava.<init> ()V
+    NEW BubbleSortJava // stworzenie nowej instancję klasy BubbleSortJava
+    DUP // zduplikowanie referencji do nowo utworzonego obiektu na stosie
+    INVOKESPECIAL BubbleSortJava.<init> ()V // wywołanie konstruktora klasy BubbleSortJava
     ASTORE 1
    L2
     LINENUMBER 21 L2
     ICONST_5
-    NEWARRAY T_INT
+    NEWARRAY T_INT // stworzenie nowej tablicy liczb całkowitych o długości 5
     DUP
     ICONST_0
     ICONST_5
@@ -193,7 +202,7 @@ public class BubbleSortJava {
     IASTORE
     DUP
     ICONST_4
-    BIPUSH 8
+    BIPUSH 8 // przesunięcie stałej 8 na stos, przypisanie wartości 8 do elementu tablicy liczb całkowitych
     IASTORE
     ASTORE 2
    L3
